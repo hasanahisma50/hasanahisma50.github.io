@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home&Holy Ltd | Ubah Rumah Menjadi Suaka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C2C2C; /* Charcoal */
+            --accent: #C5A059;  /* Muted Gold */
+            --bg: #FDFCF8;      /* Cream/Off-white */
+            --text: #4A4A4A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(253, 252, 248, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1616489953149-8f3227362f6b?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            color: white;
+            padding: 0 10%;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 0;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+        }
+
+        /* Bento Grid Services */
+        .grid-section {
+            padding: 100px 10%;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 20px;
+        }
+
+        .bento-item {
+            background: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: 1px solid #eee;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-1 { grid-column: span 2; grid-row: span 2; background: url('https://images.unsplash.com/photo-1602872030219-cdebb5243411?auto=format&fit=crop&q=80&w=800') center/cover; }
+        .item-2 { grid-column: span 2; background: #fff; border: 1px solid var(--accent); }
+        .item-3 { grid-column: span 1; background: var(--primary); color: white; }
+        .item-4 { grid-column: span 1; background: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600') center/cover; }
+
+        .bento-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            z-index: 2;
+        }
+
+        .overlay-dark {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #f9f9f9;
+            padding: 80px 10% 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .address {
+            font-style: normal;
+            margin-bottom: 2rem;
+            color: var(--text);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+            .item-1, .item-2 { grid-column: span 1; height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HOME&HOLY</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ketenangan Dimulai dari Rumah</h1>
+            <p>Kurasi produk eksklusif untuk menciptakan ruang yang tenang, suci, dan elegan.</p>
+            <a href="#" class="btn">Lihat Koleksi</a>
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <div class="bento-grid">
+            <div class="bento-item item-1">
+                <div class="overlay-dark"></div>
+                <h3 style="color: white;">Esensi Aroma</h3>
+            </div>
+            <div class="bento-item item-2">
+                <h3>Belanja Online</h3>
+                <p>Temukan kemudahan berbelanja produk dekorasi premium langsung dari kenyamanan rumah Anda.</p>
+            </div>
+            <div class="bento-item item-3">
+                <h3>Visi Kami</h3>
+                <p>Kualitas tanpa kompromi.</p>
+            </div>
+            <div class="bento-item item-4">
+                <div class="overlay-dark"></div>
+                <h3 style="color: white;">Tekstil</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 20px;">HOME&HOLY LIMITED</div>
+        <address class="address">
+            42 Renaissance Court, Prince Regent Road<br>
+            HOUNSLOW, TW3 1QH<br>
+            United Kingdom
+        </address>
+        <p>E-mail: <a href="mailto:testdevtool@gmail.com" class="contact-info">testdevtool@gmail.com</a></p>
+        <div style="margin-top: 40px; font-size: 0.7rem; opacity: 0.6; letter-spacing: 1px;">
+            &copy; 2026 HOME&HOLY LIMITED. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+</body>
+</html>
